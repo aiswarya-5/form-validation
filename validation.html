@@ -11,13 +11,13 @@
 			<div class="heading">
 				<h2> Login Here</h2>
 			</div>
-			<form name="validateform" method="post" action="login.html" onsubmit="return validatef()" >
+			<form name="validateform" method="post" action="login.html">
 				<label>Enter Your Userame</label>
 				<input type="text" name="uname" onblur="return blurfuction(this)">
 				<label>Enter Your Password</label>
 				<input type="password" name="pass" onblur="return PasswordValidation(this)">
 				<label>Enter Email</label>
-				<input type="text" name="email" onblur="return blurfuction(this)">
+				<input type="text" name="email" onblur="return EmailValidation(this)">
 				<label>Mobile No</label>
 				<input type="text" name="phone" onblur="return PhonenoValidation(this)">
 				<div class="gender">
@@ -26,7 +26,7 @@
 				</div>  
 				<label>Address</label>
 				<textarea name="address" onblur="return blurfuction(this)"></textarea> 
-				<button type="submit" onclick="return EmailValidation(document.validateform.email)">SUMBIT</button>
+				<button type="submit" onclick="return validatef()">SUMBIT</button>
 			</form>
 		</div>
 	</body>
