@@ -3,36 +3,7 @@
 	<head>
 		<title>Login Page</title>		
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script>
-			function validatef()
-			{
-				var username=document.validateform.uname.value;
-				var password=document.validateform.pass.value;	
-				var email=document.validateform.email.value;
-				var phone=document.validateform.phone.value;				
-				if(username=="" || password=="" || email=="" ||phone=="")
-				{
-					alert("Blank space is not allowed");
-					return false;
-				}
-				else if(password.length<6)
-				{
-					alert("Password must be 6 character long");
-					return false;
-				}
-				else
-				{
-					return true;
-				}
-			}
-			function blurfuction(x)
-			{					
-				if(x.value=='')
-					{
-						alert("Empty input is not allowed. Please Enter your data");	
-						return false;				
-					}	
-			}
+		<script src="valid.js">
 		</script>
 	</head>
 	<body>
@@ -44,18 +15,18 @@
 				<label>Enter Your Userame</label>
 				<input type="text" name="uname" onblur="return blurfuction(this)">
 				<label>Enter Your Password</label>
-				<input type="password" name="pass" onblur="return blurfuction(this)">
+				<input type="password" name="pass" onblur="return PasswordValidation(this)">
 				<label>Enter Email</label>
 				<input type="text" name="email" onblur="return blurfuction(this)">
 				<label>Mobile No</label>
-				<input type="text" name="phone" size="10" onblur="return blurfuction(this)">
+				<input type="text" name="phone" size="10" onblur="return PhonenoValidation(this)">
 				<div class="gender">
 					<input type="radio" value="male" name="gender" checked > Male   
 					<input type="radio" value="female" name="gender"> Female   
 				</div>  
 				<label>Address</label>
 				<textarea name="address" onblur="return blurfuction(this)"></textarea> 
-				<button type="submit">SUMBIT</button>
+				<button type="submit" onclick="return EmailValidation(document.validateform.email)">SUMBIT</button>
 			</form>
 		</div>
 	</body>
